@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MySQL_Empleat.Models.Empleat>
+@{ 
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Datas/Index.csdhtml";
+}
+
+<h2>Empleats</h2>
+<table class = "table">
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Cognom</th>
+        <th>Carrec</th>
+        <th>Sou</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayTextFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayTextFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayTextFor(modelItem => item.Cognom)
+            </td>
+            <td>
+                @Html.DisplayTextFor(modelItem => item.Carrec)
+            </td>
+            <td>
+                @Html.DisplayTextFor(modelItem => item.Sou)
+            </td>
+        </tr>
+    }
+</table>
