@@ -1,0 +1,51 @@
+﻿@model MySQL_Empleat.Models.Empleat
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Empleat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nom" class="control-label"></label>
+                <input asp-for="Nom" class="form-control" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cognom" class="control-label"></label>
+                <input asp-for="Cognom" class="form-control" />
+                <span asp-validation-for="Cognom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Carrec" class="control-label"></label>
+                <input asp-for="Carrec" class="form-control" />
+                <span asp-validation-for="Carrec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sou" class="control-label"></label>
+                <input asp-for="Sou" class="form-control" />
+                <span asp-validation-for="Sou" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
