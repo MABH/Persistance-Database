@@ -32,3 +32,5 @@ C:\Users\Miguel Angel\source\repos\MySQL_Empleat\MySQL_Empleat\obj\Debug\netcore
 C:\Users\Miguel Angel\source\repos\MySQL_Empleat\MySQL_Empleat\obj\Debug\netcoreapp2.1\MySQL_Empleat.csproj.CopyComplete
 C:\Users\Miguel Angel\source\repos\MySQL_Empleat\MySQL_Empleat\obj\Debug\netcoreapp2.1\Razor\Views\Empleat\Index.g.cshtml.cs
 C:\Users\Miguel Angel\source\repos\MySQL_Empleat\MySQL_Empleat\obj\Debug\netcoreapp2.1\Razor\Views\Empleat\Edit.g.cshtml.cs
+C:\Users\Miguel Angel\source\repos\MySQL_Empleat\MySQL_Empleat\obj\Debug\netcoreapp2.1\Razor\Views\Empleat\Delete.g.cshtml.cs
+C:\Users\Miguel Angel\source\repos\MySQL_Empleat\MySQL_Empleat\obj\Debug\netcoreapp2.1\Razor\Views\Empleat\Create.g.cshtml.cs

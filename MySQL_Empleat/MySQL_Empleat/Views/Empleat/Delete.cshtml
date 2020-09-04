@@ -1,0 +1,50 @@
+﻿@model MySQL_Empleat.Models.Empleat
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Empleat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cognom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cognom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Carrec)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Carrec)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sou)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sou)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

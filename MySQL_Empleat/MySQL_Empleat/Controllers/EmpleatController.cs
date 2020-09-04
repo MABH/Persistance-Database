@@ -14,8 +14,8 @@ namespace MySQL_Empleat.Controllers
             EmpleatContext context = HttpContext.RequestServices.GetService(typeof(MySQL_Empleat.Models.EmpleatContext)) as EmpleatContext;
 
             return View(context.GetAllEmpleats());
-        }
-                
+        }        
+
         public ActionResult Edit(int id, string nom, string cognom, string carrec, int sou)
         {
             Empleat emp = new Empleat();
@@ -24,25 +24,44 @@ namespace MySQL_Empleat.Controllers
             emp.Cognom = cognom;
             emp.Carrec = carrec;
             emp.Sou = sou;
-
-            return Edit(emp);
+            return View(emp);
         }
 
         [HttpPost]
-        public ActionResult Edit(Empleat emp)
+        public IActionResult Edit([Bind("Id,Nom,Cognom,Carrec,Sou")] Empleat emp)
         {
             EmpleatContext context = HttpContext.RequestServices.GetService(typeof(MySQL_Empleat.Models.EmpleatContext)) as EmpleatContext;
-
+            
             return View(context.UpdateEmpleat(emp));
 
         }
 
+       
+        public IActionResult Delete(int id, string nom, string cognom, string carrec, int sou)
+        {
+            EmpleatContext context = HttpContext.RequestServices.GetService(typeof(MySQL_Empleat.Models.EmpleatContext)) as EmpleatContext;
+            //context.DeleteEmpleat(id);
+            return View(context.DeleteEmpleat(id, nom, cognom, carrec, sou));
+        }
+
+        public ActionResult Create(int id, string nom, string cognom, string carrec, int sou)
+        {
+            Empleat emp = new Empleat();
+            emp.Id = id;
+            emp.Nom = nom;
+            emp.Cognom = cognom;
+            emp.Carrec = carrec;
+            emp.Sou = sou;
+            return View(emp);
+        }
+
         [HttpPost]
-        public ActionResult Delete(int id)
+        public IActionResult Create([Bind("Id,Nom,Cognom,Carrec,Sou")] Empleat emp)
         {
             EmpleatContext context = HttpContext.RequestServices.GetService(typeof(MySQL_Empleat.Models.EmpleatContext)) as EmpleatContext;
 
-            return View(context.DeleteEmpleat(id));
+            return View(context.InsertEmpleat(emp));
+
         }
     }
 }
